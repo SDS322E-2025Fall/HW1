@@ -377,32 +377,32 @@ library(tidyverse)
 ChickWeight &lt;- as_tibble(ChickWeight)
 
 # Visuaize the first ten rows of the dataset
-head(ChickWeight, 10)</code></pre>
-<pre><code>## # A tibble: 10 × 4
-##    weight  Time Chick Diet 
-##     &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt; &lt;fct&gt;
-##  1     42     0 1     1    
-##  2     51     2 1     1    
-##  3     59     4 1     1    
-##  4     64     6 1     1    
-##  5     76     8 1     1    
-##  6     93    10 1     1    
-##  7    106    12 1     1    
-##  8    125    14 1     1    
-##  9    149    16 1     1    
-## 10    171    18 1     1</code></pre>
-<p>Use some combination of <code>table()</code> and
-<code>length()</code> to answer the following questions:</p>
+head(ChickWeight, 8)</code></pre>
+<pre><code>## # A tibble: 8 × 4
+##   weight  Time Chick Diet 
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt; &lt;fct&gt;
+## 1     42     0 1     1    
+## 2     51     2 1     1    
+## 3     59     4 1     1    
+## 4     64     6 1     1    
+## 5     76     8 1     1    
+## 6     93    10 1     1    
+## 7    106    12 1     1    
+## 8    125    14 1     1</code></pre>
+<p>Use some combination of <code>dplyr</code> functions to answer the
+following questions:</p>
 <ul>
 <li>How many distinct chicks are there?<br />
 </li>
-<li>How many distinct time points?<br />
+<li>How many distinct time points are there?<br />
 </li>
-<li>How many distinct diet conditions?<br />
+<li>How many distinct diet conditions are there?<br />
 </li>
-<li>How many chicks per diet condition?</li>
+<li>How many data points are there per diet condition?</li>
 </ul>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<p>HINT: The <code>distinct()</code> function returns the unique
+elements of a set of values.</p>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
@@ -415,23 +415,21 @@ showing chick <code>weight</code> (on the y-axis) as a function of
 <code>Time</code>. Label the axes including the units of the variables
 and give the plot a title. How does chick <code>weight</code> change
 over <code>Time</code>?</h5>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
 </div>
 <div id="question-3-2-pts" class="section level3">
 <h3>Question 3: (2 pts)</h3>
-<div id="building-upon-the-previous-plot-map-chick-to-an-aesthetic-that-assigns-a-color-to-each-chicks-data-points.-add-lines-that-connect-each-chicks-points-together-with-geom_line.-finally-remove-the-legend.-do-all-chicks-seem-to-gain-weight-in-the-same-manner-whywhy-not" class="section level5">
-<h5>Building upon the previous plot, map <code>Chick</code> to an
-aesthetic that assigns a color to each chick’s data points. Add lines
-that connect each chick’s points together with <code>geom_line()</code>.
-Finally, remove the legend. Do all chicks seem to gain weight in the
-same manner? Why/Why not?</h5>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<p>Building upon the previous plot, map <code>Chick</code> to an
+aesthetic that assigns a color to each distinct chick’s data points. Add
+lines that connect each chick’s points together with
+<code>geom_line()</code>. Finally, remove the legend. Do all chicks seem
+to gain weight in the same manner? Why/Why not?</p>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
-</div>
 </div>
 <div id="question-4-2-pts" class="section level3">
 <h3>Question 4: (2 pts)</h3>
@@ -443,7 +441,7 @@ same manner? Why/Why not?</h5>
 <li>Put the points <em>on top of</em> the lines</li>
 </ul>
 <p>On which day was the last value of the chicks’ weight recorded?</p>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
@@ -451,7 +449,7 @@ same manner? Why/Why not?</h5>
 <h3>Question 5: (2 pts)</h3>
 <p>Now, facet this plot by diet. Can you tell from this new plot which
 diet results in greater weight? Explain.</p>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
@@ -462,52 +460,68 @@ line</em> (using <code>lm</code>) to the chicks in each diet with
 <code>geom_smooth()</code>. There should be 4 separate regression lines,
 one for each diet, each a separate color. Can you see more clearly which
 diet results in greater weight? Explain.</p>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<pre class="r"><code>## add your code here (and edit this comment to make it descriptive)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
 <div id="question-7-2-pts" class="section level3">
 <h3>Question 7: (2 pts)</h3>
-<p>A scatterplot might not be the best way to visualize this data: it
-calls attention to the relationship between weight and time, but it can
-be hard to see the differences between diets. A more traditional
-approach for exploring the effect of diet would be to construct a
-barplot representing group means with standard error bars showing +/- 1
-standard error.</p>
-<p>Create a plot using <code>geom_bar()</code> where each bar’s height
-corresponds to the average chick weight for each of the four diet
-conditions. Rename the y-axis to include units (e.g., with
-scale_y_continuous(<code>name=</code>…)) and make the major tick marks
-go from 0 to 150 by 25 (e.g., with
-scale_y_continuous(<code>breaks=</code>…)). Which diet has the highest
-mean <code>weight</code>?</p>
+<p>The following questions will make use of a dataset on daily
+temperature and mortality in New York City, New York for the years
+1987–2005. The dataset file is included in the homework directory
+(<code>data.csv.gz</code>).</p>
+<p>NOTE: The file is in a compressed format (the <code>.gz</code>
+extension) but it can be read directly into R using
+<code>read_csv()</code>.</p>
+<p>The dataset is a data frame with three columns:</p>
+<ul>
+<li><code>date</code>: the date of the observation in YYYY-MM-DD
+format</li>
+<li><code>temp</code>: the temperature in degrees Fahrenheit</li>
+<li><code>death</code>: the number of deaths from all non-accidental
+causes on that day</li>
+</ul>
+<p>You can read in the dataset using the following code.</p>
+<pre class="r"><code>## Read in temperature and mortality dataset 
+dat &lt;- read_csv(&quot;data.csv.gz&quot;)</code></pre>
+<p>Use tabulation techniques to summarize the relationship between
+temperature and mortality. Use <code>cut_number()</code> to create a new
+variable that divides the temperature variable into 5 categories. Then
+compute the mean of <code>death</code> in each temperature category
+using <code>group_by()</code> and <code>summarize()</code>.</p>
+<p>Describe what pattern you see with the output. From the output, how
+would you characterize the relationship between temperature and
+mortality?</p>
 <pre class="r"><code>## add your code here (and edit this comment)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
 <div id="question-8-2-pts" class="section level3">
 <h3>Question 8: (2 pts)</h3>
-<p>Add error bars showing + or - 1 SE using
-<code>geom_errorbar(stat = &quot;summary&quot;)</code>. Make the error-bars
-skinnier by adding a <code>width =</code><strong>0.5</strong> argument.
-Color the bars (not the error bars, but the barplot bars) by diet and
-change from the default color scheme using a <code>scale_fill_</code> or
-a <code>scale_color_</code>. diet seems to have the most variation in
-<code>weight</code>? The least variation?</p>
+<p>Use <code>ggplot2</code> functions to make a scatterplot of
+temperature on the x-axis and mortality on the y-axis. Add a linear
+regression line to the plot using
+<code>geom_smooth(method = &quot;lm&quot;)</code> and add a flexible smoother to
+your scatterplot using <code>geom_smooth()</code>. Make sure to label
+your axes informatively and provide a title for the plot.</p>
+<p>Describe the general trends that you see in the scatterplot. From the
+scatterplot output, how would you characterize the relationship between
+temperature and mortality? In particular, what is happening with the
+data in the range of temperature greater than 80 degrees?</p>
 <pre class="r"><code>## add your code here (and edit this comment)</code></pre>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>
 <div id="question-9-2-pts" class="section level3">
 <h3>Question 9: (2 pts)</h3>
-<p>Take your code from question 8 and replace <code>geom_bar()</code>
-with <code>geom_point()</code>. Remove the <code>breaks=</code> argument
-from <code>scale_y_continuous</code>. Make the points larger and color
-them all red. Put them <em>on top of</em> the error bars. Does the mean
-chick weight seem to differ based on the diet? <em>I am not asking to
-conduct hypothesis testing but informally state if they seem to differ
-and if so, how.</em></p>
-<pre class="r"><code>## add your code here (and edit this comment)</code></pre>
+<p>The tabular output using 5 categories of temperature and the
+scatterplot show different summaries of the data. How could you modify
+the tabular summary of the data to better match the pattern seen in the
+scatterplot?</p>
+<p><strong>Your answer goes here. Write sentences in bold.</strong></p>
+<p>From what you have seen, what would you hypothesize is the true
+relationship between daily temperature and mortality in New York
+City?</p>
 <p><strong>Your answer goes here. Write sentences in bold.</strong></p>
 <hr />
 </div>

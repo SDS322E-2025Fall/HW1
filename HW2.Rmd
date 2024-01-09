@@ -124,9 +124,26 @@ Go back to your plot from question 2 and fit a *linear regression line* (using `
 
 ### Question 7: (2 pts)
 
-A scatterplot might not be the best way to visualize this data: it calls attention to the relationship between weight and time, but it can be hard to see the differences between diets. A more traditional approach for exploring the effect of diet would be to construct a barplot representing group means with standard error bars showing +/- 1 standard error.
+The following questions will make use of a dataset on daily temperature and mortality in New York City, New York for the years 1987--2005. The dataset file is included in the homework directory (`data.csv.gz`). 
 
-Create a plot using `geom_bar()` where each bar's height corresponds to the average chick weight for each of the four diet conditions. Rename the y-axis to include units (e.g., with scale_y_continuous(`name=`...)) and make the major tick marks go from 0 to 150 by 25 (e.g., with scale_y_continuous(`breaks=`...)). Which diet has the highest mean `weight`? 
+NOTE: The file is in a compressed format (the `.gz` extension) but it can be read directly into R using `read_csv()`.
+
+The dataset is a data frame with three columns:
+
+* `date`: the date of the observation in YYYY-MM-DD format
+* `temp`: the temperature in degrees Fahrenheit
+* `death`: the number of deaths from all non-accidental causes on that day
+
+You can read in the dataset using the following code.
+
+```{r}
+## Read in temperature and mortality dataset 
+dat <- read_csv("data.csv.gz")
+```
+
+Use tabulation techniques to summarize the relationship between temperature and mortality. Use `cut_number()` to create a new variable that divides the temperature variable into 5 categories. Then compute the mean of `death` in each temperature category using `group_by()` and `summarize()`. 
+
+Describe what pattern you see with the output. From the output, how would you characterize the relationship between temperature and mortality?
 
 ```{r}
 ## add your code here (and edit this comment)
@@ -139,7 +156,9 @@ Create a plot using `geom_bar()` where each bar's height corresponds to the aver
 
 ### Question 8: (2 pts)
 
-Add error bars showing + or - 1 SE using `geom_errorbar(stat = "summary")`. Make the error-bars skinnier by adding a `width =`**0.5** argument. Color the bars (not the error bars, but the barplot bars) by diet and change from the default color scheme using a `scale_fill_` or a `scale_color_`. diet seems to have the most variation in `weight`? The least variation?
+Use `ggplot2` functions to make a scatterplot of temperature on the x-axis and mortality on the y-axis. Add a linear regression line to the plot using `geom_smooth(method = "lm")` and add a flexible smoother to your scatterplot using `geom_smooth()`. Make sure to label your axes informatively and provide a title for the plot. 
+
+Describe the general trends that you see in the scatterplot. From the scatterplot output, how would you characterize the relationship between temperature and mortality? In particular, what is happening with the data in the range of temperature greater than 80 degrees? 
 
 ```{r}
 ## add your code here (and edit this comment)
@@ -152,12 +171,12 @@ Add error bars showing + or - 1 SE using `geom_errorbar(stat = "summary")`. Make
 
 ### Question 9: (2 pts)
 
-Take your code from question 8 and replace `geom_bar()` with `geom_point()`. Remove the `breaks=` argument from `scale_y_continuous`. Make the points larger and color them all red. Put them *on top of* the error bars. Does the mean chick weight seem to differ based on the diet? *I am not asking to conduct hypothesis testing but informally state if they seem to differ and if so, how.*
+The tabular output using 5 categories of temperature and the scatterplot show different summaries of the data. How could you modify the tabular summary of the data to better match the pattern seen in the scatterplot?
 
-```{r}
-## add your code here (and edit this comment)
+**Your answer goes here. Write sentences in bold.**
 
-```
+
+From what you have seen, what would you hypothesize is the true relationship between daily temperature and mortality in New York City?
 
 **Your answer goes here. Write sentences in bold.**
 
