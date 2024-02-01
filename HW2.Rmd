@@ -24,21 +24,14 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = 
 # Load the tidyverse (including ggplot2)
 library(tidyverse)
 
-# Save dataset as a tidyverse dataframe (tibble)
+# Save local copy of the dataset as a tidyverse dataframe (tibble)
 ChickWeight <- as_tibble(ChickWeight)
 
 # Visuaize the first ten rows of the dataset
 head(ChickWeight, 8)
 ```
 
-Use some combination of `dplyr` functions to answer the following questions: 
-
-- How many distinct chicks are there?  
-- How many distinct time points are there?  
-- How many distinct diet conditions are there?  
-- How many data points are there per diet condition? 
-
-HINT: The `distinct()` function returns the unique elements of a set of values.
+Using `ggplot2` functions, make a histogram of the chicks' weights and create a separate histogram for each `Diet` using faceting. Make sure to set the `bins` argument for the histogram to an appropriate value.
 
 
 ```{r}
@@ -51,7 +44,7 @@ HINT: The `distinct()` function returns the unique elements of a set of values.
 
 ### Question 2: (2 pts)
 
-##### Using `ggplot2` functions, create a simple scatterplot showing chick `weight` (on the y-axis) as a function of `Time`. Label the axes including the units of the variables and give the plot a title. How does chick `weight` change over `Time`?
+Using `ggplot2` functions, create a simple scatterplot showing chick `weight` (on the y-axis) as a function of `Time`. Label the axes including the units of the variables and give the plot a title. How does chick `weight` change over `Time`?
 
 ```{r}
 ## add your code here (and edit this comment to make it descriptive)
@@ -64,7 +57,7 @@ HINT: The `distinct()` function returns the unique elements of a set of values.
 
 ### Question 3: (2 pts)
 
-Building upon the previous plot, map `Chick` to an aesthetic that assigns a color to each distinct chick’s data points. Add lines that connect each chick’s points together with `geom_line()`. Finally, remove the legend. Do all chicks seem to gain weight in the same manner? Why/Why not?
+Building upon the previous plot, map `Chick` to an aesthetic that assigns a color to each distinct chick’s data points. Add lines that connect each chick’s points together with `geom_line()`. Finally, remove the legend with the `theme()` function. Do all chicks seem to gain weight in the same manner? Why/Why not?
 
 
 ```{r}
@@ -181,6 +174,20 @@ From what you have seen, what would you hypothesize is the true relationship bet
 **Your answer goes here. Write sentences in bold.**
 
 ------------------------------------------------------------------------
+
+### Question 10: (2 pts)
+
+Below is a system diagram depicting the analysis of temperature and mortality done in Question 7.
+
+![System diagram showing the steps taken and expecatations in the analysis of temperature and mortality data.](temp_mortality.png)
+
+Describe 2 implicit assumptions that are made by this analysis plan that could cause a problem in the analysis if those assumptions were not true. Use a bulleted list to describe those assumptions.
+
+* 
+
+* 
+
+
 
 ### Formatting: (2 pts)
 
