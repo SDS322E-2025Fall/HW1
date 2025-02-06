@@ -10,8 +10,6 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = 
 
 ## Enter your name and EID here
 
-**This homework is due on February 3, 2023 by 11:59pm. You will submit a pdf file on Gradescope.**
-
 *For all questions, include the R code that you used to find your answer (show R chunk and outputs). Answers without supporting code will not receive credit (unless no code was required). Outputs without comments will not receive credit either: Write full sentences to describe your findings.*
 
 ------------------------------------------------------------------------
@@ -38,7 +36,6 @@ Using `ggplot2` functions, make a histogram of the chicks' weights and create a 
 ## add your code here (and edit this comment to make it descriptive)
 ```
 
-**Your answer goes here. Write sentences in bold.**
 
 ------------------------------------------------------------------------
 
