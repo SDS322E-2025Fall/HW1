@@ -101,7 +101,7 @@ Now, facet this plot by diet. Can you tell from this new plot which diet results
 
 ### Question 6: (2 pts)
 
-Go back to your plot from question 2 and fit a *linear regression line* (using `lm`) to the chicks in each diet with `geom_smooth()`. There should be 4 separate regression lines, one for each diet, each a separate color. Can you see more clearly which diet results in greater weight? Explain.
+Go back to your plot from question 2 and fit a *linear regression line* (using `lm`) to the chicks in each diet with `geom_smooth()`. There should be 4 separate regression lines, one for each diet, each a separate color. Can you see more clearly which diet results in greater weight? Which diet results in greater weight?
 
 ```{r}
 ## add your code here (and edit this comment to make it descriptive)
