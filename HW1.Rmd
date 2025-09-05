@@ -1,5 +1,6 @@
 ---
 title: "HW 1"
+output: pdf_document
 ---
 
 ```{r global_options, include=FALSE}
@@ -12,7 +13,6 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = 
 
 *For all questions, include the R code that you used to find your answer (show R chunk and outputs). Answers without supporting code will not receive credit (unless no code was required). Outputs without comments will not receive credit either: Write full sentences to describe your findings.*
 
-------------------------------------------------------------------------
 
 ### Question 1: (2 pts)
 
@@ -37,7 +37,6 @@ Using `ggplot2` functions, make a histogram of the chicks' weights and create a 
 ```
 
 
-------------------------------------------------------------------------
 
 ### Question 2: (2 pts)
 
@@ -50,7 +49,6 @@ Using `ggplot2` functions, create a simple scatterplot showing chick `weight` (o
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 3: (2 pts)
 
@@ -64,7 +62,6 @@ Building upon the previous plot, map `Chick` to an aesthetic that assigns a colo
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 4: (2 pts)
 
@@ -84,7 +81,6 @@ On which day was the last value of the chicks' weight recorded?
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 5: (2 pts)
 
@@ -97,7 +93,6 @@ Now, facet this plot by diet. Can you tell from this new plot which diet results
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 6: (2 pts)
 
@@ -110,7 +105,6 @@ Go back to your plot from question 2 and fit a *linear regression line* (using `
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 7: (2 pts)
 
@@ -142,7 +136,6 @@ Describe what pattern you see with the output. From the output, how would you ch
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
 
 ### Question 8: (2 pts)
 
@@ -157,22 +150,8 @@ Describe the general trends that you see in the scatterplot. From the scatterplo
 
 **Your answer goes here. Write sentences in bold.**
 
-------------------------------------------------------------------------
-
-### Question 9: (2 pts)
-
-The tabular output using 5 categories of temperature and the scatterplot show different summaries of the data. How could you modify the tabular summary of the data to better match the pattern seen in the scatterplot?
-
-**Your answer goes here. Write sentences in bold.**
-
-
-From what you have seen, what would you hypothesize is the true relationship between daily temperature and mortality in New York City?
-
-**Your answer goes here. Write sentences in bold.**
-
 
 ### Formatting: (2 pts)
 
 Comment your code, write full sentences, knit your file, and select all appropriate pages in Gradescope for each question!
 
-------------------------------------------------------------------------
