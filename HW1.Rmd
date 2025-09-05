@@ -1,5 +1,5 @@
 ---
-title: "HW 2"
+title: "HW 1"
 ---
 
 ```{r global_options, include=FALSE}
@@ -169,21 +169,6 @@ The tabular output using 5 categories of temperature and the scatterplot show di
 From what you have seen, what would you hypothesize is the true relationship between daily temperature and mortality in New York City?
 
 **Your answer goes here. Write sentences in bold.**
-
-------------------------------------------------------------------------
-
-### Question 10: (2 pts)
-
-Below is a system diagram depicting the analysis of temperature and mortality done in Question 7.
-
-![System diagram showing the steps taken and expecatations in the analysis of temperature and mortality data.](temp_mortality.png)
-
-Describe 2 implicit assumptions that are made by this analysis plan that could cause a problem in the analysis if those assumptions were not true. Use a bulleted list to describe those assumptions.
-
-* 
-
-* 
-
 
 
 ### Formatting: (2 pts)
